@@ -7,7 +7,7 @@ import org.valen.microservicios.cursos.dto.StudentDTO;
 
 import java.util.List;
 
-@FeignClient(name = "ms-students", url = "localhost:8090/api/student")
+@FeignClient(name = "ms-students", url = "localhost:8080/api/student")
 public interface StudentClient {
 
     @GetMapping("search-by-course/{courseId}")

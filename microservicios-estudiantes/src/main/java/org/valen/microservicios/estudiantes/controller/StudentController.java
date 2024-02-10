@@ -11,7 +11,7 @@ import org.valen.microservicios.estudiantes.service.IStudentService;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/student")
+@RequestMapping("/api/student")
 public class StudentController {
 
     @Autowired
