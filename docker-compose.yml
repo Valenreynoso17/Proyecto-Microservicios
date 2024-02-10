@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  mysql-db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: studentsDb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - MySQLVolume:/var/lib/mysql
+
+  postgresql-db:
+    image: postgres:bullseye
+    ports:
+     - "5432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: coursesDb
+    volumes:
+      - PostgreSQLVolume:/var/lib/postgresql/data
+
+volumes:
+  MySQLVolume:
+
+  PostgreSQLVolume:
